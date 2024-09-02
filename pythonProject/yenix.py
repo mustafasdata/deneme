@@ -327,6 +327,18 @@ kontrol(10)
 
 
 
+name='ali'
+surname='canli'
+f'my name is {name} and surname {surname}'  #formatet string
+
+
+print(r"i\m ali")  #raw string
+
+
+
+
+
+
 
 
 
