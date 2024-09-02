@@ -9,9 +9,9 @@
 
 ###############################################
 # FONKSİYONLAR (FUNCTIONS)
+#######################
 ###############################################
 
-#######################
 # Fonksiyon Okuryazarlığı
 #######################
 
@@ -35,6 +35,8 @@ def calculate(x):
 calculate(5)
 
 
+
+
 # İki argümanlı/parametreli bir fonksiyon tanımlayalım.
 
 def summer(arg1, arg2):
@@ -46,6 +48,7 @@ summer(7, 8)
 summer(8, 7)
 
 summer(arg2=8, arg1=7)
+
 
 
 #######################
@@ -91,6 +94,7 @@ def say_hi():
 say_hi()
 
 
+
 def say_hi(string):
     print(string)
     print("Hi")
@@ -107,6 +111,8 @@ def multiplication(a, b):
 
 multiplication(10, 9)
 
+
+
 # girilen değerleri bir liste içinde saklayacak fonksiyon.
 
 list_store = []
@@ -121,6 +127,18 @@ def add_element(a, b):
 add_element(1, 8)
 add_element(18, 8)
 add_element(180, 10)
+
+
+lista=[]
+
+def ekler(a,b):
+    c=a*b
+    lista.append(c)
+    print(lista)
+
+ekler(56,59)
+
+
 
 
 #######################
