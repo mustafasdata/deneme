@@ -5,7 +5,7 @@
 # - Koşullar (Conditions)
 # - Döngüler (Loops)
 # - Comprehesions
-
+from sympy.stats.sampling.sample_numpy import numpy
 
 ###############################################
 # FONKSİYONLAR (FUNCTIONS)
@@ -17,7 +17,7 @@
 
 print('a','b',sep='-')
 
-
+?print
 
 print("a", "b")
 
@@ -33,6 +33,18 @@ def calculate(x):
 
 
 calculate(5)
+
+
+
+
+
+def f(x):
+    print(x*2)
+f(10)
+
+
+
+
 
 
 
@@ -76,6 +88,7 @@ def summer(arg1, arg2):
 
 
 summer(1, 3)
+
 
 
 #######################
@@ -137,6 +150,7 @@ def ekler(a,b):
     print(lista)
 
 ekler(56,59)
+
 
 
 
@@ -219,6 +233,18 @@ type(calculate(98, 12, 78))
 varma, moisturea, chargea, outputa = calculate(98, 12, 78)
 
 
+
+def kac(a,b,c):
+    a=a*3
+    b=b*5
+    c=c*9
+    d=a*b+c
+    return a,b,c,d
+a,b,c,d=kac(5,6,2)
+
+
+
+
 #######################
 # Fonksiyon İçerisinden Fonksiyon Çağırmak
 ######################
@@ -235,6 +261,12 @@ def standardization(a, p):
 
 
 standardization(45, 1)
+
+
+
+
+
+
 
 
 def all_calculation(varm, moisture, charge, p):
@@ -275,6 +307,8 @@ add_element(1, 9)
 1 == 1
 1 == 2
 
+if 2==2:
+    print('gut')
 
 
 
@@ -304,6 +338,23 @@ number = 20
 
 
 
+if x==10:
+    print('ok')
+x=10
+
+
+
+
+def f(x):
+    if x>5:
+        print('besten buyuk')
+    else:
+        print('beten kucuk')
+f(3)
+
+
+
+
 def number_check(number):
     if number == 10:
         print("number is 10")
@@ -323,7 +374,9 @@ def kontrol(sayi):
 kontrol(10)
 
 
-
+x='I'
+y='love'
+f'my {x} you {y}'
 
 
 
@@ -414,7 +467,8 @@ for student in students:
 
 
 
-
+for i in students:
+    print(i)
 
 
 
@@ -439,6 +493,8 @@ for salary in salaries:
     print(salary)
 
 
+
+
 for salary in salaries:
     print(int(salary*20/100 + salary))
 
@@ -447,6 +503,9 @@ for salary in salaries:
 
 for salary in salaries:
     print(int(salary*50/100 + salary))
+
+
+
 
 salaries = [1000, 2000, 3000, 4000, 5000]
 
@@ -458,15 +517,11 @@ hesap(200,40)
 
 
 
+
+
 salaries = [1000, 2000, 3000, 4000, 5000]
 for para in salaries:
     print(hesap(para,10))
-
-
-
-
-
-
 
 
 
@@ -478,6 +533,19 @@ new_salary(2000, 20)
 
 for salary in salaries:
     print(new_salary(salary, 20))
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 salaries2 = [10700, 25000, 30400, 40300, 50200]
@@ -493,6 +561,75 @@ for salary in salaries:
 
 
 
+
+liste=[100,200,300,400,500]
+
+def makina(i,oran):
+    return i*oran/100+i
+makina(600,30)
+
+
+for i in liste:
+    if i >=300:
+        print(makina(i,10))
+    else:
+        print(makina(i,20))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def newsalary(salary,rate):
+    return(int(salary*rate/100+salary))
+
+newsalary(300,10)
+
+
+
+salarys=[100,200,300,400,500]
+
+for i in salarys:
+    if i>=300:
+        print(newsalary(i, 30))
+    else:
+        print(newsalary(i,50))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #######################
 # Uygulama - Mülakat Sorusu
 #######################
@@ -504,7 +641,7 @@ for salary in salaries:
 
 range(len('masal'))
 for i in range(len('masal')):
-    print(i.upper())
+    print(i)
 
 
 range(len("miuul"))
@@ -516,6 +653,19 @@ for i in range(len("miuul")):
 # 4 % 2 == 0
 # m = "miuul"
 # m[0]
+,
+
+
+
+
+
+
+
+
+
+
+
+
 
 def alternating(string):
     new_string = ""
@@ -534,6 +684,18 @@ alternating("miuul")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 def yazi(cümle):
     yeni_yazi=""
     for i in range (len(cümle)):
@@ -543,6 +705,13 @@ def yazi(cümle):
             yeni_yazi +=cümle[i].lower()
     print(yeni_yazi)
 yazi('mustafa')
+
+
+
+
+
+
+
 
 
 
@@ -590,11 +759,6 @@ yazi("kahramanmaras")
 
 
 
-
-
-
-
-
 #######################
 # break & continue & while
 #######################
@@ -608,10 +772,18 @@ for salary in salaries:
 
 
 
+
+
+
+
+
+
 for salary in salaries:
     if salary == 3000:
         continue
     print(salary)
+
+
 
 
 
@@ -648,6 +820,14 @@ while sayi<10:
 
 
 
+sayi=5
+while sayi<9:
+    print(sayi)
+    sayi+=1
+
+
+
+
 
 #######################
 # Enumerate: Otomatik Counter/Indexer ile for loop
@@ -661,6 +841,13 @@ for student in students:
 for index, student in enumerate(students):
     print(index, student)
 
+
+
+
+
+
+students = ["John", "Mark", "Venessa", "Mariam"]
+
 A = []
 B = []
 
@@ -671,7 +858,6 @@ for index, student in enumerate(students):
         B.append(student)
 
 A
-
 
 
 
@@ -931,10 +1117,23 @@ def new_salary(x):
 for salary in salaries:
     print(new_salary(salary))
 
+
+
+
+
+
+
+
 null_list = []
 
 for salary in salaries:
     null_list.append(new_salary(salary))
+
+
+
+
+
+
 
 null_list = []
 
@@ -944,17 +1143,32 @@ for salary in salaries:
     else:
         null_list.append(new_salary(salary * 2))
 
+
+
+
+
+
 [new_salary(salary * 2) if salary < 3000 else new_salary(salary) for salary in salaries]
+
+
 [salary * 2 for salary in salaries]
 [salary * 2 for salary in salaries if salary < 3000]
 [salary * 2 if salary < 3000 else salary * 0 for salary in salaries]
+
 [new_salary(salary * 2) if salary < 3000 else new_salary(salary * 0.2) for salary in salaries]
+
+
 students = ["John", "Mark", "Venessa", "Mariam"]
 students_no = ["John", "Venessa"]
 
 
 [student.lower() if student in students_no else student.upper() for student in students]
 [student.upper() if student not in students_no else student.lower() for student in students]
+
+
+
+
+
 
 #######################
 # Dict Comprehension
@@ -1005,6 +1219,8 @@ for n in numbers:
     if n % 2 == 0:
         new_dict[n] = n ** 2
 
+#veya
+
 {n: n ** 2 for n in numbers if n % 2 == 0}
 
 #######################
@@ -1029,6 +1245,9 @@ for col in df.columns:
     print(col.upper())
 
 
+
+
+
 A = []
 
 for col in df.columns:
@@ -1039,6 +1258,12 @@ df.columns = A
 df = sns.load_dataset("car_crashes")
 
 df.columns = [col.upper() for col in df.columns]
+
+
+
+
+
+
 
 #######################
 # İsminde "INS" olan değişkenlerin başına FLAG diğerlerine NO_FLAG eklemek istiyoruz.
@@ -1133,6 +1358,21 @@ df[num_cols].agg(new_dict)
 #############################################
 import numpy as np
 
+
+import numpy as np
+
+
+
+
+
+
+
+
+
+
+
+
+
 a = [1, 2, 3, 4]
 b = [2, 3, 4, 5]
 
@@ -1140,6 +1380,11 @@ ab = []
 
 for i in range(0, len(a)):
     ab.append(a[i] * b[i])
+
+
+
+
+
 
 a = np.array([1, 2, 3, 4])
 b = np.array([2, 3, 4, 5])
@@ -1207,6 +1452,12 @@ m[:, 0]
 m[1, :]
 m[0:2, 0:3]
 
+
+
+
+
+
+
 #############################################
 # Fancy Index
 #############################################
@@ -1219,6 +1470,8 @@ v[4]
 catch = [1, 2, 3]
 
 v[catch]
+
+
 
 #############################################
 # Numpy'da Koşullu İşlemler (Conditions on Numpy)
@@ -1234,6 +1487,16 @@ ab = []
 for i in v:
     if i < 3:
         ab.append(i)
+
+
+
+
+
+v<3
+
+v[v<3]
+
+
 
 #######################
 # Numpy ile
@@ -1306,6 +1569,10 @@ s.values
 type(s.values)
 s.head(3)
 s.tail(3)
+
+
+
+
 
 #############################################
 # Veri Okuma (Reading Data)
