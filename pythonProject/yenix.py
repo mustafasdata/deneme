@@ -1,4 +1,4 @@
-mccccccccccccccccccc
+mcccccccccccccccccccfffff
 ###############################################
 # PYTHON İLE VERİ ANALİZİ (DATA ANALYSIS WITH PYTHON)
 ###############################################
