@@ -1,4 +1,4 @@
-mcccccccccccccccccccfffff
+
 ###############################################
 # PYTHON İLE VERİ ANALİZİ (DATA ANALYSIS WITH PYTHON)
 ###############################################
@@ -28,13 +28,6 @@ import numpy as np
 
 
 import numpy as np
-
-
-
-
-
-
-
 
 
 
@@ -324,7 +317,7 @@ df.head()
 import pandas as pd
 import seaborn as sns
 
-pd.set_option('display.max_columns', None)
+pd.set_option('display.max_columns', None)  #none butun stunlari gösterir
 df = sns.load_dataset("titanic")
 df.head()
 
@@ -336,7 +329,7 @@ df.age.head()
 df["age"].head()
 type(df["age"].head())
 
-df[["age"]].head()
+df[["age"]].head()  #daha güzel gözükür
 type(df[["age"]].head())
 
 df[["age", "alive"]]
@@ -365,9 +358,9 @@ df.head()
 
 # iloc: integer based selection
 df.iloc[0:3]
-df.iloc[0, 0]
+df.iloc[0, 0]             #0 a 0 i getirir
 
-# loc: label based selection
+# loc: label based selection  label :sutun demek
 df.loc[0:3]
 
 df.iloc[0:3, 0:3]
@@ -375,6 +368,11 @@ df.loc[0:3, "age"]
 
 col_names = ["age", "embarked", "alive"]
 df.loc[0:3, col_names]
+
+
+
+
+
 
 #######################
 # Koşullu Seçim (Conditional Selection)
@@ -387,19 +385,32 @@ df = sns.load_dataset("titanic")
 df.head()
 
 df[df["age"] > 50].head()
-df[df["age"] > 50]["age"].count()
+df[df["age"] > 50]["age"].count()   #sadece bu stunu getir
 
-df.loc[df["age"] > 50, ["age", "class"]].head()
+df.loc[df["age"] > 50, ["age", "class"]].head()        #bu iki stunu getir
 
-df.loc[(df["age"] > 50) & (df["sex"] == "male"), ["age", "class"]].head()
+df.loc[(df["age"] > 50) & (df["sex"] == "male"), ["age", "class"]].head()  #log yer gösterir
+
 
 df["embark_town"].value_counts()
+
 
 df_new = df.loc[(df["age"] > 50) & (df["sex"] == "male")
                 & ((df["embark_town"] == "Cherbourg") | (df["embark_town"] == "Southampton")),
 ["age", "class", "embark_town"]]
 
 df_new["embark_town"].value_counts()
+
+
+
+
+
+
+
+
+
+
+
 
 #############################################
 # Toplulaştırma ve Gruplama (Aggregation & Grouping)
@@ -428,7 +439,8 @@ df["age"].mean()
 
 df.groupby("sex")["age"].mean()
 
-df.groupby("sex").agg({"age": "mean"})
+df.groupby("sex").agg({"age": "mean"})   #yukaridaki böylede yazilabilir
+
 df.groupby("sex").agg({"age": ["mean", "sum"]})
 
 df.groupby("sex").agg({"age": ["mean", "sum"],
@@ -455,17 +467,17 @@ pd.set_option('display.max_columns', None)
 df = sns.load_dataset("titanic")
 df.head()
 
-df.pivot_table("survived", "sex", "embarked")
+df.pivot_table("survived", "sex", "embarked") #pivotta otomatik 1.values 2.index 3.column oluyor
 
 df.pivot_table("survived", "sex", ["embarked", "class"])
 
 df.head()
 
-df["new_age"] = pd.cut(df["age"], [0, 10, 18, 25, 40, 90])
+df["new_age"] = pd.cut(df["age"], [0, 10, 18, 25, 40, 90]) ##bu sayilara bölüyor -grupluyor
 
 df.pivot_table("survived", "sex", ["new_age", "class"])
 
-pd.set_option('display.width', 500)
+pd.set_option('display.width', 500)  #ciktiyi genisletme güzellestirme-yatay verir -asagiya atmaz
 
 #############################################
 # Apply ve Lambda
